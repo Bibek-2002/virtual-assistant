@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, rgba(73, 61, 255, 0.45) 0%, rgba(2, 2, 41, 0.95) 55%), radial-gradient(circle at 80% 0%, rgba(0, 204, 255, 0.35) 0%, rgba(4, 4, 28, 0.98) 60%);
+  font-family: "Urbanist", sans-serif;
+  color: #f4f6ff;
+}
+
+#root {
+  min-height: 100vh;
+}

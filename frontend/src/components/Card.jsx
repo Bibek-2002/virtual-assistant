@@ -4,12 +4,12 @@ import { userDataContext } from '../context/UserContext'
 function Card({image}) {
       const {serverUrl,userData,setUserData,backendImage,setBackendImage,frontendImage,setFrontendImage,selectedImage,setSelectedImage}=useContext(userDataContext)
   return (
-    <div className={`w-[70px] h-[140px] lg:w-[150px] lg:h-[250px] bg-[#020220] border-2 border-[#0000ff66] rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-950 cursor-pointer hover:border-4 hover:border-white ${selectedImage==image?"border-4 border-white shadow-2xl shadow-blue-950 ":null}`} onClick={()=>{
+    <div className={`group relative flex h-[160px] w-[110px] items-center justify-center overflow-hidden rounded-[26px] border border-white/15 bg-white/10 shadow-[0_20px_55px_rgba(6,15,60,0.55)] transition duration-300 hover:-translate-y-[6px] hover:border-[#60a5fa] hover:shadow-[0_26px_75px_rgba(30,64,175,0.65)] lg:h-[260px] lg:w-[170px] ${selectedImage==image?"border-[#60a5fa] ring-2 ring-offset-2 ring-offset-[#020221] shadow-[0_30px_80px_rgba(56,189,248,0.55)]":""}`} onClick={()=>{
         setSelectedImage(image)
         setBackendImage(null)
         setFrontendImage(null)
         }}>
-      <img src={image} className='h-full object-cover'  />
+      <img src={image} className='h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]'  />
     </div>
   )
 }
